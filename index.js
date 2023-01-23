@@ -26,7 +26,7 @@ class Library {
 
 const library = new Library();
 
-let getInput = () => {
+const getInput = () => {
   const title = document.getElementById('bookTitle');
   const author = document.getElementById('bookAuthor');
   const book = new Book(title.value, author.value);
@@ -35,7 +35,7 @@ let getInput = () => {
   return book;
 };
 
-let addToUI = (bookObj) => {
+const addToUI = (bookObj) => {
   let colorClass = '';
   if (library.data.indexOf(bookObj) % 2 !== 0) {
     colorClass = 'light';

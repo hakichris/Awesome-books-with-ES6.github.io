@@ -1,4 +1,3 @@
-
 let display = () => {
   const sectionList = document.getElementById('displaybook');
   const sectionForm = document.getElementById('form');
@@ -28,6 +27,6 @@ let display = () => {
     sectionContact.style.display = 'block';
     stayword.style.display = 'none';
   });
-}
+};
 
 export default display;
