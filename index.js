@@ -1,6 +1,3 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable no-use-before-define */
-
 import Book from './modules/Book.js';
 import { DateTime } from './modules/luxon.js';
 import display from './modules/display.js';
@@ -72,7 +69,6 @@ window.onload = () => {
   display();
 };
 
-// eslint-disable-next-line no-unused-vars
 const Date = document.querySelector('.date');
 const dt = DateTime.local();
 Date.innerHTML = dt.toISO();
