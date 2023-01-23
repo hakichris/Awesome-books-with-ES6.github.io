@@ -1,4 +1,5 @@
-export default function display() {
+
+let display = () => {
   const sectionList = document.getElementById('displaybook');
   const sectionForm = document.getElementById('form');
   const sectionContact = document.getElementById('contact');
@@ -28,3 +29,5 @@ export default function display() {
     stayword.style.display = 'none';
   });
 }
+
+export default display;
