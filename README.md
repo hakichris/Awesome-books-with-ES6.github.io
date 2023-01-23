@@ -3,8 +3,6 @@
 
 
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-<!--   <img src="" alt="logo" width="140"  height="auto" /> -->
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -82,7 +80,7 @@
 
 - [ ] **[Display date added]**
 - [ ] **[summary of the book]**
-- [ ] **[new_feature_3]**
+- [ ] **[display bookcover]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,7 +90,7 @@
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/hakichris/Awesome-Books-Project/issues).
+Feel free to check the [issues page](https://github.com/hakichris/Awesome-books-with-ES6/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,18 +115,6 @@ I would like to thank...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
