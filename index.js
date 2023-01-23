@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import Book from './modules/Book.js';
 import { DateTime } from './modules/luxon.js';
 import display from './modules/display.js';
@@ -22,7 +23,7 @@ class Library {
 }
 
 const library = new Library();
-// eslint-disable-next-line no-unused-vars
+
 const addToUI = (bookObj) => {
   let colorClass = '';
   if (library.data.indexOf(bookObj) % 2 !== 0) {
