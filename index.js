@@ -5,6 +5,7 @@ import Book from './modules/Book.js';
 import { DateTime } from './modules/luxon.js';
 import display from './modules/display.js';
 
+
 class Library {
   constructor() {
     this.data = [];
@@ -14,19 +15,20 @@ class Library {
     this.data.push(book);
     localStorage.setItem('library', JSON.stringify(this.data));
     addToUI(book);
-  };
+  }
 
   removeBook = (id) => {
     const book = document.getElementById(id);
     book.remove();
     this.data = this.data.filter((bookObj) => bookObj.id !== id);
     localStorage.setItem('library', JSON.stringify(this.data));
-  };
+  }
+
 }
 
 const library = new Library();
 
-function getInput() {
+let getInput = () => {
   const title = document.getElementById('bookTitle');
   const author = document.getElementById('bookAuthor');
   const book = new Book(title.value, author.value);
@@ -35,7 +37,7 @@ function getInput() {
   return book;
 }
 
-function addToUI(bookObj) {
+let addToUI = (bookObj) => {
   let colorClass = '';
   if (library.data.indexOf(bookObj) % 2 !== 0) {
     colorClass = 'light';
@@ -69,11 +71,11 @@ window.onload = () => {
     return;
   }
   library.data.forEach((book) => addToUI(book));
-  display();
+  display ();
 };
 
 // eslint-disable-next-line no-unused-vars
+  const Date = document.querySelector('.date');
+  const dt = DateTime.local();
+  Date.innerHTML = dt.toISO();    
 
-const Date = document.querySelector('.date');
-const dt = DateTime.local();
-Date.innerHTML = dt.toISO();
