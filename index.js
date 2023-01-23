@@ -22,7 +22,7 @@ class Library {
 }
 
 const library = new Library();
-
+// eslint-disable-next-line no-unused-vars
 const addToUI = (bookObj) => {
   let colorClass = '';
   if (library.data.indexOf(bookObj) % 2 !== 0) {
