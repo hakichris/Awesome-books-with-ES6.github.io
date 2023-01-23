@@ -2,6 +2,25 @@ import Book from './modules/Book.js';
 import { DateTime } from './modules/luxon.js';
 import display from './modules/display.js';
 
+const addToUI = (bookObj) => {
+  let colorClass = '';
+  if (library.data.indexOf(bookObj) % 2 !== 0) {
+    colorClass = 'light';
+  } else {
+    colorClass = 'dark';
+  }
+  const bookList = document.getElementById('book-list');
+  const book = document.createElement('li');
+  book.classList.add('book');
+  book.classList.add(colorClass);
+  book.setAttribute('id', bookObj.id);
+  book.innerHTML = `<p><span>"${bookObj.title}"</span> by ${bookObj.author}</p>`;
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = 'Remove';
+  deleteBtn.addEventListener('click', () => library.removeBook(bookObj.id));
+  book.appendChild(deleteBtn);
+  bookList.appendChild(book);
+};
 class Library {
   constructor() {
     this.data = [];
@@ -30,26 +49,6 @@ const getInput = () => {
   title.value = '';
   author.value = '';
   return book;
-};
-
-const addToUI = (bookObj) => {
-  let colorClass = '';
-  if (library.data.indexOf(bookObj) % 2 !== 0) {
-    colorClass = 'light';
-  } else {
-    colorClass = 'dark';
-  }
-  const bookList = document.getElementById('book-list');
-  const book = document.createElement('li');
-  book.classList.add('book');
-  book.classList.add(colorClass);
-  book.setAttribute('id', bookObj.id);
-  book.innerHTML = `<p><span>"${bookObj.title}"</span> by ${bookObj.author}</p>`;
-  const deleteBtn = document.createElement('button');
-  deleteBtn.innerHTML = 'Remove';
-  deleteBtn.addEventListener('click', () => library.removeBook(bookObj.id));
-  book.appendChild(deleteBtn);
-  bookList.appendChild(book);
 };
 
 const addButton = document.getElementById('add-btn');
