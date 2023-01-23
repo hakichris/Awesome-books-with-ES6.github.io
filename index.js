@@ -64,7 +64,6 @@ window.onload = () => {
   library.data = JSON.parse(localStorage.getItem('library' || '[]'));
   if (library.data === null) {
     library.data = [];
-    return;
   }
   library.data.forEach((book) => addToUI(book));
   display();
