@@ -65,17 +65,6 @@ addButton.addEventListener('click', () => {
   library.addBook(book);
 });
 
-// Load page
-window.onload = () => {
-  library.data = JSON.parse(localStorage.getItem('library' || '[]'));
-  if (library.data === null) {
-    library.data = [];
-    return;
-  }
-
-  library.data.forEach((book) => addToUI(book));
-};
-
 // eslint-disable-next-line no-unused-vars
 function displaySection(section) {
   const sectionList = document.getElementById('displaybook');
@@ -110,10 +99,22 @@ function displaySection(section) {
   }
 }
 
+// Load page
+window.onload = () => {
+    library.data = JSON.parse(localStorage.getItem('library' || '[]'));
+    if (library.data === null) {
+      library.data = [];
+      return;
+    }
+  
+    library.data.forEach((book) => addToUI(book));
+    setDate();
+  };
+
 function setDate() {
   const date = document.getElementById('date');
   // eslint-disable-next-line no-undef
   const { DateTime } = luxon;
-
+  
   date.innerHTML = DateTime.now().toFormat('LLL dd yyyy, t');
 }
