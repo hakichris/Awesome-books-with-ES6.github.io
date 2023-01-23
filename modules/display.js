@@ -1,4 +1,4 @@
-let display = () => {
+const display = () => {
   const sectionList = document.getElementById('displaybook');
   const sectionForm = document.getElementById('form');
   const sectionContact = document.getElementById('contact');
