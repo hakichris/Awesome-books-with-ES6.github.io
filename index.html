@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Awesome Books</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h2 class="header-title">Awesome Books</h2>
+        <nav>
+          <ul class="nav-list">
+            <li>
+              <a  id="navList">List of books</a>
+            </li>
+            <li>
+              <a  id="navNew">Add New book</a>
+            </li>
+            <li>
+              <a id="navContact">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p id="date" class="date"></p>
+    </header>
+    <h2 class="stay centered">
+      This is a single page application. It displays all books, add/remove
+      new/old book
+    </h2>
+    <main>
+      <div id="displaybook" class="displaybook">
+        <div>
+          <h1 id="title" class="title">All Awesome Books</h1>
+        </div>
+        <div id="list" class="list">
+          <ul id="book-list"></ul>
+        </div>
+        <hr />
+      </div>
+      <div id="form" class="form">
+        <h2 class="title1">Add a new book</h2>
+        <form action="#" class="input-form" method="post">
+          <input id="bookTitle" type="text" placeholder="Title" />
+          <input id="bookAuthor" type="text" placeholder="Author" />
+          <button id="add-btn" type="button">Add</button>
+        </form>
+      </div>
+      <div id="contact" class="contact">
+        <h1 class="title">Contact information</h1>
+        <p class="title">If you have any questions.You can reach us here:</p>
+        <ul class="reachout">
+          <li>Our email: <a href="#">mymail@mail.com</a></li>
+          <li>Our twitter: <a href="#">@awesomeBooks</a></li>
+          <li>Our github: <a href="#">@awesomeBooks</a></li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer">
+      <h3>Copyright &copy;</h3>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
