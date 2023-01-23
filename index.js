@@ -6,6 +6,7 @@ class Library {
   constructor() {
     this.data = [];
   }
+
   load() {
     this.data = JSON.parse(localStorage.getItem('library' || '[]'));
     if (this.data === null) {
@@ -13,6 +14,7 @@ class Library {
     }
     this.data.forEach((book) => this.addToUI(book));
   }
+
   addBook = (book) => {
     this.data.push(book);
     localStorage.setItem('library', JSON.stringify(this.data));
