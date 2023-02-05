@@ -88,7 +88,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](hakichrisbooklist.netlify.app)
+- [Live Demo Link](https://hakichris.github.io/Awesome-books-with-ES6.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
